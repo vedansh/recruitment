@@ -11,7 +11,7 @@ class CandidateManager(models.Manager):
 
 class Candidate(models.Model):
 	name = models.CharField(max_length=50)
-	email = models.CharField(max_length=50, unique=True)
+	email = models.EmailField( unique=True)
 	password = models.CharField(max_length=50)
 	id = models.CharField(max_length=64, primary_key=True, editable=False)
 	recruiter = models.ForeignKey(Recruiter, blank=True, null=True, on_delete=models.SET_NULL)
