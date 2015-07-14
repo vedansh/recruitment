@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<meta charset="UTF-8">
+	<title>Assignment</title>
+</head>
+<body>
+	<div class="container">
+		<h1>Candidates</h1>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Recruiter</th>
+					<th>Action</th>
+				</tr>
+				<tr>
+					<td>Automatically generated</td>
+					<td><input class="form-control name-input"></td>
+					<td><input class="form-control email-input"></td>
+					<td><input class="form-control recruiter-input"></td>
+					<td><button class="btn btn-primary add-candidate">Add</button></td>
+				</tr>
+			</thead>
+			<tbody class="candidates-list"></tbody>
+		</table>
+	</div>
+
+	<script type="text/template" class="candidates-list-template">
+	<td><span class="id"><%= id %></span></td>
+	<td><span class="name"><%= name %></span></td>
+	<td><span class="email"><%= email %></span></td>
+	<td><span class="recruiter"><%= recruiter %></span></td>
+	<td><button class="btn btn-warning edit-candidate">Edit</button> <button class="btn btn-danger delete-candidate">Delete</button><button class="btn btn-success update-candidate" style="display:none">Update</button> <button class="btn btn-danger cancel" style="display:none">Cancel</button></td>
+
+	</script>
+	
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/underscore/underscore.js"></script>
+	<script src="bower_components/backbone/backbone.js"></script>
+	<script src="js/scripts2.js"></script>
+
+	
+
+	<div class="container">
+		<h1>Recruiters</h1>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Action</th>
+				</tr>
+				<tr>
+					<td>Automatically generated</td>
+					<td><input class="form-control namer-input"></td>
+					<td><input class="form-control emailr-input"></td>
+					<td><button class="btn btn-primary add-recruiter">Add</button></td>
+				</tr>
+			</thead>
+			<tbody class="recruiters-list"></tbody>
+		</table>
+	</div>
+
+	<script type="text/template" class="recruiters-list-template">
+	<td><span class="id"><%= id %></span></td>
+	<td><span class="name"><%= name %></span></td>
+	<td><span class="email"><%= email %></span></td>
+	<td><button class="btn btn-warning edit-recruiter">Edit</button> <button class="btn btn-danger delete-recruiter">Delete</button><button class="btn btn-success update-recruiter" style="display:none">Update</button> <button class="btn btn-danger cancel" style="display:none">Cancel</button></td>
+
+	</script>
+	
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/underscore/underscore.js"></script>
+	<script src="bower_components/backbone/backbone.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>
